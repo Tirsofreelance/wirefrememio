@@ -1,0 +1,105 @@
+/*------------------------------------*\
+    $CLASES
+\*------------------------------------*/
+
+/*--COLORES--*/
+
+.basecolor{
+	background: $basecolor;
+}
+
+.baselight{
+	background: $baselight;
+}
+
+.secondary{
+	background: $secondary;
+}
+
+.compcolor {
+	background: $compcolor;
+}
+
+.superdark {
+	background: $superdark;
+}
+
+.darkergrey {
+	background: $darkergrey;
+}
+
+.grey{
+	background: $grey;
+}
+
+.lightgrey{
+	background: $lightgrey;
+}
+
+.white 	{
+	background: $white;
+}
+
+/*--HEADER--*/
+
+.logo{
+
+	background: $black;
+	border-radius:50%;
+	display: table;
+	height: 140px;
+	margin:auto;
+	text-align:center;
+	width: 140px;
+}
+.logo p{
+	color: rgba(255,255,255,.9);
+	display: table-cell;
+	vertical-align: middle;
+}
+/*--ROWS--*/
+
+.row{
+
+	background: $lightgrey;
+	display: block;
+	width:100%;
+}
+
+
+
+/*--COLUMNS--*/
+
+.col{
+	border: 1px dotted $red;
+	display: inline-block;
+	margin: 0;
+	padding:.5em;
+}
+
+
+.col--12{
+
+	width: 100%;
+	
+}
+
+.col--6{
+	
+	width: 100%;
+}
+
+.col--3{
+	
+	width: 100%;
+}
+
+.col--2{
+	
+	width: 50%;
+}
+
+.col--1{
+	
+	width: 25%;
+}

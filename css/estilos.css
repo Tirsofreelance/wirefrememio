@@ -1,0 +1,900 @@
+/*------------------------------------*\
+    $STYLE
+\*------------------------------------*/
+/**
+ * Aquí incluímos todos los módulos (archivos .scss) que se van
+ * a compilar en el CSS definitivo: /css/style.css.
+ * Si no usas algún módulo, es recomendable que elimines
+ * o comentes su inclusión para no tener estilos innecesarios en tu CSS final
+ * y optimizar lo máximo posible.
+ */
+/*------------------------------------*\
+    $CONTENIDO
+\*------------------------------------*/
+/**
+ * Contenido..................... Esto que lees
+
+ * Variables..................... Configuramos todas las variables del framework
+
+ * Mixins........................ Mixins de LESS
+
+ * Helpers....................... Clases de ayuda
+
+ * Reset......................... Reinicio de valores CSS
+
+ * Fuentes....................... Fuentes que vamos a importar
+
+ * Links......................... Formas y estilos de los links
+
+ * Tablas........................ Estilos de las tablas
+
+ * Botones....................... Estilos de Botones, skins y variantes
+
+ * Elementos..................... Elementos varios como Imagen, HR, etc...
+
+ * Tipografía.................... Encabezados, small, párrafos, listas, etc...
+
+ * Navegación.................... Una navegación, por si quieres usar esta y no la tuya propia
+
+ * Formularios................... Estilos de todos los elementos de formularios y sus variantes
+
+ * Sitio......................... Aquí escribes tus estilos para la web se vea como tu quieres ;)
+
+ * Paginación.................... Estilos básicos para las paginaciones
+
+ * Texturas...................... Badges, cajas y wells
+
+ * Breakpoints................... Importamos breakpoints basados en las variables @bp$
+
+ * Patron........................ Estilos para la guía de patrones
+ */
+/*------------------------------------*\
+    $VARIABLES
+\*------------------------------------*/
+/* Colores sociales -> son los colores corporativos, pero cambiadlos 
+ * si hace falta. (también podéis añadir más)  ///////////////////////
+ */
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $SHORTHANDS
+\*------------------------------------*/
+.cf::after, .cf::before {
+  content: "+";
+  display: table; }
+.cf::after {
+  clear: both; }
+
+/*------------------------------------*\
+    $RESET
+\*------------------------------------*/
+/**
+ * Que en realidad es un normalize:
+
+/*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block; }
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9.
+ * Hide the `template` element in IE, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none; }
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background: transparent; }
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold; }
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+img {
+  border: 0; }
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto; }
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10.
+ */
+button {
+  overflow: visible; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8+, and Opera
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal; }
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box; }
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Remove default vertical scrollbar in IE 8/9.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold; }
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td,
+th {
+  padding: 0; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Arial, Helvetica;
+  color: #0a0a0a; }
+
+h1, .h1 {
+  font-size: 2em;
+  padding: .5em; }
+
+h2, .h2 {
+  font-size: 1.5em;
+  padding: .5em; }
+
+h3, .h3 {
+  font-size: 1.20em;
+  padding: .5em; }
+
+/*------------------------------------*\
+    $CLASES
+\*------------------------------------*/
+/*--COLORES--*/
+.basecolor {
+  background: #00a1cb; }
+
+.baselight {
+  background: #7fe4ff; }
+
+.secondary {
+  background: #cb2a00; }
+
+.compcolor {
+  background: #da802d; }
+
+.superdark {
+  background: #1a1a1a; }
+
+.darkergrey {
+  background: #262626; }
+
+.grey {
+  background: gray; }
+
+.lightgrey {
+  background: #bfbfbf; }
+
+.white {
+  background: white; }
+
+/*--HEADER--*/
+.logo {
+  background: black;
+  border-radius: 50%;
+  display: table;
+  height: 140px;
+  margin: auto;
+  text-align: center;
+  width: 140px; }
+
+.logo p {
+  color: rgba(255, 255, 255, 0.9);
+  display: table-cell;
+  vertical-align: middle; }
+
+/*--ROWS--*/
+.row {
+  background: #bfbfbf;
+  display: block;
+  width: 100%; }
+
+/*--COLUMNS--*/
+.col {
+  border: 1px dotted #990000;
+  display: inline-block;
+  margin: 0;
+  padding: .5em; }
+
+.col--12 {
+  width: 100%; }
+
+.col--6 {
+  width: 100%; }
+
+.col--3 {
+  width: 100%; }
+
+.col--2 {
+  width: 50%; }
+
+.col--1 {
+  width: 25%; }
+
+/*------------------------------------*\
+    $NAVEGACIÓN
+\*------------------------------------*/
+/**
+*
+* Le asignamos la clase .nav al ul que contenga la navegación:
+
+		 <ul class="nav">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="about.html">About us</a></li>
+			<li><a href="products.html">Products</a></li>
+			<li><a href="services.html">Services</a></li>
+			<li><a href="contact.html">Contact us</a></li>
+		</ul>
+*/
+.nav > li {
+  position: relative;
+  display: inline-block; }
+  .nav > li > a {
+    position: relative;
+    padding: 12px; }
+    .nav > li > a:hover, .nav > li > a:focus {
+      text-decoration: none;
+      background-color: #00c9fe; }
+
+/**
+*
+* .nav--fit extiende a .nav y alarga la navegación
+* para que ocupe el 100% de su contenedor
+
+		 <ul class="nav nav--fit">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="about.html">About us</a></li>
+			<li><a href="products.html">Products</a></li>
+			<li><a href="services.html">Services</a></li>
+			<li><a href="contact.html">Contact us</a></li>
+		</ul>
+*
+*/
+.nav--fit {
+  display: table;
+  width: 100%; }
+  .nav--fit > li {
+    display: table-cell; }
+    .nav--fit > li > a {
+      display: block; }
+
+/**
+*
+* .nav--tabs extiende a .nav y crea la base para una navegación
+* en pestañas.
+
+		 <ul class="nav nav--tabs">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="about.html">About us</a></li>
+			<li><a href="products.html">Products</a></li>
+			<li><a href="services.html">Services</a></li>
+			<li><a href="contact.html">Contact us</a></li>
+		</ul>
+*
+*/
+.nav--tabs {
+  border-bottom: 1px solid #00c9fe; }
+  .nav--tabs > li {
+    margin-bottom: -1px; }
+    .nav--tabs > li > a {
+      display: block; }
+
+/*------------------------------------*\
+    $BOTONES
+\*------------------------------------*/
+/*
+ * Definimos los botones y sus variantes
+ */
+/**
+* .btn es la clase principal para definir un botón
+*/
+.btn {
+  display: inline-block;
+  *zoom: 1;
+  line-height: 3em;
+  color: darkergrey;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 100%;
+  white-space: nowrap;
+  background-color: #e6e6e6;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 1em;
+  padding-left: 1em;
+  border-radius: 2px;
+  	/**
+   	* Nadie quiere un botón con texto subrayado cuando
+   	* hacemos hover.
+   	*/ }
+  .btn:hover {
+    text-decoration: none; }
+  .btn:active, .btn:focus {
+    outline: none; }
+  .btn:visited {
+    color: darkergrey; }
+
+/*------------------------------------*\
+    $VARIANTES
+\*------------------------------------*/
+/**
+ * Variantes de los botones: color para dar sensaciones.
+ *
+ */
+/**
+* Inputs con estilo de botones
+*/
+input[type="submit"].btn:hover {
+  border-color: #cccccc; }
+
+/**
+* Botón no disponible
+*/
+.btn--disabled {
+  opacity: .5;
+  cursor: default; }
+
+/**
+* Botón de Error
+*/
+.btn--error {
+  background-color: #da4f49;
+  color: #48110f; }
+  .btn--error:hover {
+    color: #fcf3f3; }
+  .btn--error:visited {
+    color: #48110f; }
+
+/**
+* Botón de Info
+*/
+.btn--info {
+  background-color: #a5dddf;
+  color: #308588; }
+  .btn--info:hover {
+    color: white; }
+  .btn--info:visited {
+    color: #308588; }
+
+/**
+* Botón principal
+*/
+.btn--primary {
+  background-color: #00a1cb;
+  color: white; }
+  .btn--primary:hover {
+    color: #98eaff; }
+  .btn--primary:visited {
+    color: black; }
+
+/**
+* Botón de OK
+*/
+.btn--success {
+  background-color: #5bb75b;
+  color: #153115; }
+  .btn--success:hover {
+    color: #e9f5e9; }
+  .btn--success:visited {
+    color: #153115; }
+
+/**
+* Botón de advertencia
+*/
+.btn--warning {
+  background-color: #faa732;
+  color: #5e3802; }
+  .btn--warning:hover {
+    color: #fffcf9; }
+  .btn--warning:visited {
+    color: #5e3802; }
+
+.btn--inactive,
+.btn--inactive:hover,
+.btn--inactive:active,
+.btn--inactive:focus {
+  opacity: .5;
+  cursor: default;
+  cursor: text; }
+
+/*------------------------------------*\
+    $TAMAÑOS
+\*------------------------------------*/
+/**
+ * Variantes de los botones por tamaño.
+ *
+ */
+.btn--mini {
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+  line-height: 2; }
+
+.btn--small {
+  padding-right: 1.5em;
+  padding-left: 1.5em;
+  line-height: 3; }
+
+.btn--large {
+  padding-right: 3em;
+  padding-left: 3em;
+  line-height: 4; }
+
+/*------------------------------------*\
+    $GRUPOS
+\*------------------------------------*/
+/**
+ * Con esta clase podemos agrupar los botones
+ * en grupos horizontales.
+ *
+ */
+.btn-group {
+  position: relative;
+  *zoom: 1;
+  *margin-left: .3em; }
+
+.btn-group .btn {
+  position: relative;
+  border-radius: 0;
+  float: left;
+  margin-left: -1px; }
+
+.btn-group .btn:first-child {
+  margin-left: 0;
+  border-radius: 0, 0, 2px, 2px; }
+
+.btn-group .btn:last-child {
+  border-radius: 2px, 2px, 0, 0; }
+
+.btn-group .btn.large:first-child {
+  margin-left: 0;
+  border-radius: 2px, 0, 2px, 0; }
+
+.btn-group .btn.large:last-child {
+  border-radius: 0, 2px, 0, 2px; }
+
+/*falta tipografía me daba error*/
+/*------------------------------------*\
+    $LINKS
+\*------------------------------------*/
+a {
+  text-decoration: none;
+  color: #00a1cb; }
+  a:visited {
+    color: #00a1cb; }
+  a:hover {
+    text-decoration: underline;
+    color: #007998; }
+  a:focus {
+    outline: thin dotted;
+    color: #007998; }
+  a:hover, a:active {
+    outline: 0; }
+
+/*------------------------------------*\
+    $SITIO
+\*------------------------------------*/
+@-webkit-viewport {
+  width: device-width; }
+
+@-moz-viewport {
+  width: device-width; }
+
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+@viewport {
+  width: device-width; }
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  background: white;
+  font-size: 100%;
+  margin: 0;
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: white;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: transparent;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.5em;
+  color: darkergrey; }
+
+/**
+* A partir de aquí es donde debes escribir los estilos de posicionamiento
+* y detalles que forman tu web. Disfruta!
+*/
+/*------------------------------------*\
+    $BREAKPOINTS
+\*------------------------------------*/
+/*
+ * Cada Mediaquery se basará en la variable $bp$ e incluirá el archivo bp$.less
+ */
+@media only screen and (min-width: 20em) {
+  /*------------------------------------*\
+      $BREAKPOINT_1 MIN WIDTH: 320px
+  \*------------------------------------*/
+  /*
+   * Estilos que entrarán en el breakpoint basado en la variable $bp1
+   */ }
+@media only screen and (min-width: 30em) {
+  /*------------------------------------*\
+      $BREAKPOINT_2  MIN WIDTH: 480px
+  \*------------------------------------*/
+  /*
+   * Estilos que entrarán en el breakpoint basado en la variable $bp2
+   */ }
+@media only screen and (min-width: 48em) {
+  /*------------------------------------*\
+      $BREAKPOINT_3  MIN WIDTH: 768px
+  \*------------------------------------*/
+  /*
+   * Estilos que entrarán en el breakpoint basado en la variable $bp3
+   */
+  .col--12 {
+    width: 100%; }
+
+  .col--6 {
+    width: 49%; }
+
+  .col--3 {
+    width: 24%; }
+
+  .col--2 {
+    width: 12%; }
+
+  .col--1 {
+    width: 6%; } }
+@media only screen and (min-width: 64em) {
+  /*------------------------------------*\
+      $BREAKPOINT_4  MIN WIDTH: 1024px
+  \*------------------------------------*/
+  /*
+   * Estilos que entrarán en el breakpoint basado en la variable $bp4
+   */
+  body {
+    background: #eaeaea; }
+
+  .row {
+    background: #eee;
+    margin: auto;
+    max-width: 1024px; } }
+@media only screen and (min-width: 75em) {
+  /*------------------------------------*\
+      $BREAKPOINT_5  MIN WIDTH: 1200px
+  \*------------------------------------*/
+  /*
+   * Estilos que entrarán en el breakpoint basado en la variable $bp5
+   */ }
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  /*------------------------------------*\
+      $2x
+  \*------------------------------------*/
+  /*
+   * Breakpoint para dispositivos retina
+   */ }

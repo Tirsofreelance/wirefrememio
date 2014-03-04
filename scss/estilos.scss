@@ -1,0 +1,44 @@
+/*------------------------------------*\
+    $STYLE
+\*------------------------------------*/
+/**
+ * Aquí incluímos todos los módulos (archivos .scss) que se van
+ * a compilar en el CSS definitivo: /css/style.css.
+ * Si no usas algún módulo, es recomendable que elimines
+ * o comentes su inclusión para no tener estilos innecesarios en tu CSS final
+ * y optimizar lo máximo posible.
+ */
+
+@import "contenido.scss";
+
+@import "variables.scss";
+
+@import "mixins.scss";
+
+@import "shorthands.scss";
+
+@import "reset.scss";
+
+@import "fonts.scss";
+
+@import "id.scss";
+
+@import "classes.scss";
+
+@import "navigation.scss";
+
+@import "botones.scss";
+
+/*falta tipografía me daba error*/
+
+@import "links.scss";
+
+@import "site.scss";
+
+@import "breakpoints.scss";
+
+
+
+
+
+
